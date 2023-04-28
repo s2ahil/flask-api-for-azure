@@ -9,6 +9,13 @@ import pandas as pd
 
 app=Flask(__name__)
 
+@app.route('/',methods=['GET'])
+def home():
+    print("hello")
+    kuch=json.dumps("hello")
+    return kuch
+
+
 @app.route('/predict',methods=['POST'])
 def predict():
  try:
